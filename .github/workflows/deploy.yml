@@ -37,6 +37,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           sudo docker pull junaidsde/cicd-repo:latest
-          sudo docker stop web-app || true
-          sudo docker rm web-app || true
-          sudo docker run -d --name web-app -p 3005:3000 junaidsde/cicd-repo:latest
+          sudo docker stop cicd-repo || true
+          sudo docker rm cicd-repo || true
+          sudo docker run -d --name cicd-repo -p 3005:3000 junaidsde/cicd-repo:latest
