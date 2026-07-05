@@ -45,4 +45,4 @@ jobs:
           sudo docker stop cicd-repo || true
           sudo docker rm cicd-repo || true
           
-          sudo docker run -d --name cicd-repo -p 3005:3000 junaidsde/cicd-repo:latest
+          sudo docker run -d --name cicd-repo -p 80:3000 junaidsde/cicd-repo:latest
